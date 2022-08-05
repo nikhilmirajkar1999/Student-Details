@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Student Details</title>
+</head>
+<body>
+	<h1>Fill Details</h1>
+	<form action="#" th:action="@{/saveStudent}" th:object="${addstudent}"
+		method="post">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" th:field="*{name}"></td>
+			</tr>
+			<tr>
+				<td>Branch</td>
+				<td><input type="text" th:field="*{branch}"></td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td><input type="text" th:field="*{year}"></td>
+			</tr>
+			<tr>
+				<td>YOP</td>
+				<td><input type="text" th:field="*{yop}"></td>
+			</tr>
+			<tr>
+				<td>1st Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa1}"></td>
+			</tr>
+			<tr>
+				<td>2nd Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa2}"></td>
+			</tr>
+			<tr>
+				<td>3rd Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa3}"></td>
+			</tr>
+			<tr>
+				<td>4th Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa4}"></td>
+			</tr>
+			<tr>
+				<td>5th Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa5}"></td>
+			</tr>
+			<tr>
+				<td>6th Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa6}"></td>
+			</tr>
+			<tr>
+				<td>7th Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa7}"></td>
+			</tr>
+			<tr>
+				<td>8th Sem SGPA</td>
+				<td><input type="text" th:field="*{sgpa8}"></td>
+			</tr>
+			<tr>
+				<td>CGPA</td>
+				<td><input type="text" th:field="*{cgpa}"></td>
+			</tr>
+			<tr>
+				<td>Grade</td>
+				<td><input type="text" th:field="*{grade}"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Add</button></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

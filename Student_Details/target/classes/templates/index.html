@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Engineering Student Details</title>
+</head>
+<style>
+.table {
+	padding: 2px;
+	margin-top: 20px;
+	font-style: italic;
+}
+.add{ 
+     text-decoration: none;
+     border: 2px solid black;
+     background-color:gray;
+     padding: 10px 20px;
+     margin-bottom: 2px;
+     margin-left:600px;
+     color:black;
+     
+}
+.add:hover{
+     text-decoration: none;
+     background-color:orange;
+     border: 2px solid black;
+     border-radius:10px;
+     padding: 10px 20px;
+     color:maroon;
+
+}
+.h1{
+    color:maroon;
+}
+
+</style>
+<body>
+	<h1 align="center" class="h1">Engineering Students' Details</h1>
+	<br>
+	<a href="/new" class="add">Add Student</a>
+	<br>
+	<table border="1" class="table">
+		<thead>
+			<tr>
+				<td>USN</td>
+				<td>Name</td>
+				<td>Branch</td>
+				<td>year</td>
+				<td>YOP</td>
+				<td>1st Sem SGPA</td>
+				<td>2nd Sem SGPA</td>
+				<td>3rd Sem SGPA</td>
+				<td>4th Sem SGPA</td>
+				<td>5th Sem SGPA</td>
+				<td>6th Sem SGPA</td>
+				<td>7th Sem SGPA</td>
+				<td>8th Sem SGPA</td>
+				<td>CGPA</td>
+				<td>Grade</td>
+				<td>Actions</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="l:${student}">
+				<td th:text=${l.USN}>USN</td>
+				<td th:text=${l.name}>Name</td>
+				<td th:text=${l.branch}>Branch</td>
+				<td th:text=${l.year}>Year</td>
+				<td th:text=${l.yop}>YOP</td>
+				<td th:text=${l.sgpa1}>SGPA1</td>
+				<td th:text=${l.sgpa2}>SGPA2</td>
+				<td th:text=${l.sgpa3}>SGPA3</td>
+				<td th:text=${l.sgpa4}>SGPA4</td>
+				<td th:text=${l.sgpa5}>SGPA5</td>
+				<td th:text=${l.sgpa6}>SGPA6</td>
+				<td th:text=${l.sgpa7}>SGPA7</td>
+				<td th:text=${l.sgpa8}>SGPA8</td>
+				<td th:text=${l.cgpa}>CGPA</td>
+				<td th:text=${l.grade}>Grade</td>
+				<td><a th:href="@{'/edit/'+${l.USN}}">Edit</a>&nbsp; <a
+					th:href="@{'/delete/'+${l.USN}}">Delete</a>&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
